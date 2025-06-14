@@ -10,7 +10,7 @@ def list_activities() -> list[str]:
 
 def print_activities_names(activities: list[str]) -> None:
     for index, valor in enumerate(activities):
-        print(f'[ {index:0^3} ] {valor}')
+        print(f'[ {index:0>3} ] {valor}')
 
 
 def main():

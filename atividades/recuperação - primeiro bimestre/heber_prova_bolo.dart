@@ -10,7 +10,7 @@ class HeberProvaBolo extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Receita de Bolo de Cenoura"),
+        title: Text('Receita de Bolo de Cenoura'),
         backgroundColor: Theme.of(context).colorScheme.surface,
         centerTitle: true,
       ),
@@ -24,7 +24,7 @@ class HeberProvaBolo extends StatelessWidget {
               child: SizedBox(
                 height: tamanhoTela.height * 0.3,
                 width: tamanhoTela.width,
-                child: Image.asset("images/bolo_cenoura.jpg", fit: BoxFit.cover,),
+                child: Image.asset('images/bolo_cenoura.jpg', fit: BoxFit.cover,),
               ),
             ),
             Padding(
@@ -36,7 +36,7 @@ class HeberProvaBolo extends StatelessWidget {
                   Icon(Icons.star, color: Colors.amber, size: 24),
                   Icon(Icons.star, color: Colors.amber, size: 24),
                   Icon(Icons.star_half, color: Colors.amber, size: 24),
-                  Text(" 4.5 (250 avaliações)"),
+                  Text(' 4.5 (250 avaliações)'),
                 ],
               ),
             ),
@@ -44,20 +44,20 @@ class HeberProvaBolo extends StatelessWidget {
             // Ingredientes
             Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
-              child: Text("Ingredientes:", style: estiloTitulo,),
+              child: Text('Ingredientes:', style: estiloTitulo,),
             ),
-            Text("\u2022 Cenouras, Ovos, Óleo, Açúcar, Farinha Fermento"),
-            Text("\u2022 Cobertura: Açúcar, Chocolate em pó, Manteiga, Leite"),
+            Text('\u2022 Cenouras, Ovos, Óleo, Açúcar, Farinha Fermento'),
+            Text('\u2022 Cobertura: Açúcar, Chocolate em pó, Manteiga, Leite'),
 
             // Modo de Preparo
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8.0),
-              child: Text("Modo de Preparo:", style: estiloTitulo,),
+              child: Text('Modo de Preparo:', style: estiloTitulo,),
             ),
-            Text("1. Bata cenoura, ovos e óleo no liquidificador."),
-            Text("2. Misture os líquidos com açúcar e farinha. Adicione o fermento por último."),
-            Text("3. Asse em forno médio (180°C) por 30-40 minutos."),
-            Text("4. Para a cobertura: Cozinhe todos os ingredientes em fogo baixo até engrossar. Despeje sobre o bolo quente.")
+            Text('1. Bata cenoura, ovos e óleo no liquidificador.'),
+            Text('2. Misture os líquidos com açúcar e farinha. Adicione o fermento por último.'),
+            Text('3. Asse em forno médio (180°C) por 30-40 minutos.'),
+            Text('4. Para a cobertura: Cozinhe todos os ingredientes em fogo baixo até engrossar. Despeje sobre o bolo quente.')
           ],
         ),
       ),

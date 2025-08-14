@@ -10,7 +10,7 @@ class Coffee extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Meu café",
+          'Meu café',
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.brown,
@@ -24,7 +24,7 @@ class Coffee extends StatelessWidget {
             width: larguraTela,
             child: Padding(
               padding: const EdgeInsets.all(20),
-              child: Text("Como eu gosto do meu café..."),
+              child: Text('Como eu gosto do meu café...'),
             ),
           ),
           Container(
@@ -36,7 +36,7 @@ class Coffee extends StatelessWidget {
           ),
           Expanded(
             child: Image.asset(
-              "images/coffee_bg.jpg",
+              'images/coffee_bg.jpg',
               width: larguraTela,
               fit: BoxFit.cover,
               alignment: Alignment.bottomCenter,
@@ -65,8 +65,8 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
       children: [
         Row(
           children: [
-            Text("Intensidade: "),
-            for (int i = 0; i < intensidadeCafe; i++) Image.asset("images/coffee_bean.png", width: 25,),
+            Text('Intensidade: '),
+            for (int i = 0; i < intensidadeCafe; i++) Image.asset('images/coffee_bean.png', width: 25,),
             Expanded(child: SizedBox()),
             FilledButton(onPressed: () {
               setState(() {
@@ -82,8 +82,8 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         ),
         Row(
           children: [
-            Text("Açúcar: "),
-            for(int i = 0; i < quantidadeAcucar; i++) Image.asset("images/sugar_cube.png", width: 25,),
+            Text('Açúcar: '),
+            for(int i = 0; i < quantidadeAcucar; i++) Image.asset('images/sugar_cube.png', width: 25,),
             Expanded(child: SizedBox()),
             FilledButton(onPressed: () {
               setState(() {

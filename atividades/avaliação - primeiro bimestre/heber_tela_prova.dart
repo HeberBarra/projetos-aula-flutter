@@ -14,7 +14,7 @@ class HeberTelaProva extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Icon(Icons.menu),
-        title: Text("Pet Love"),
+        title: Text('Pet Love'),
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Theme.of(context).colorScheme.onInverseSurface,
         centerTitle: true,
@@ -35,7 +35,7 @@ class HeberTelaProva extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(16),
                           child: Image.asset(
-                            "img/dog.jpg",
+                            'images/dog.jpg',
                             fit: BoxFit.cover,
                             height: alturaImagem,
                             width: larguraImagem,
@@ -65,16 +65,16 @@ class HeberTelaProva extends StatelessWidget {
                                 ),
                                 child: Padding(
                                   padding: const EdgeInsets.all(4.0),
-                                  child: Text("2 anos"),
+                                  child: Text('2 anos'),
                                 ),
                               ),
-                              Text("Toby - RSD", style: estiloNome),
+                              Text('Toby - RSD', style: estiloNome),
                             ],
                           ),
                         ),
                         TextButton(
                           onPressed: () => {},
-                          child: Text("Quero adotar"),
+                          child: Text('Quero adotar'),
                         ),
                       ],
                     ),
@@ -89,7 +89,7 @@ class HeberTelaProva extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(16),
                           child: Image.asset(
-                            "img/lhasa.jpg",
+                            'images/lhasa.jpg',
                             fit: BoxFit.cover,
                             height: alturaImagem,
                             width: larguraImagem,
@@ -100,7 +100,7 @@ class HeberTelaProva extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Text("Lhasa", style: estiloNome),
+                              Text('Lhasa', style: estiloNome),
                               Container(
                                 decoration: BoxDecoration(
                                   color:
@@ -119,7 +119,7 @@ class HeberTelaProva extends StatelessWidget {
                                 ),
                                 child: Padding(
                                   padding: const EdgeInsets.all(4.0),
-                                  child: Text("1 ano"),
+                                  child: Text('1 ano'),
                                 ),
                               ),
                             ],
@@ -127,7 +127,7 @@ class HeberTelaProva extends StatelessWidget {
                         ),
                         TextButton(
                           onPressed: () => {},
-                          child: Text("Quero adotar"),
+                          child: Text('Quero adotar'),
                         ),
                       ],
                     ),
@@ -142,7 +142,7 @@ class HeberTelaProva extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(16),
                           child: Image.asset(
-                            "img/pug.jpg",
+                            'images/pug.jpg',
                             fit: BoxFit.cover,
                             height: alturaImagem,
                             width: larguraImagem,
@@ -153,7 +153,7 @@ class HeberTelaProva extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Text("Axel - Puggy", style: estiloNome),
+                              Text('Axel - Puggy', style: estiloNome),
                               Container(
                                 decoration: BoxDecoration(
                                   color:
@@ -172,7 +172,7 @@ class HeberTelaProva extends StatelessWidget {
                                 ),
                                 child: Padding(
                                   padding: const EdgeInsets.all(4.0),
-                                  child: Text("2 anos"),
+                                  child: Text('2 anos'),
                                 ),
                               ),
                             ],
@@ -180,7 +180,7 @@ class HeberTelaProva extends StatelessWidget {
                         ),
                         TextButton(
                           onPressed: () => {},
-                          child: Text("Quero adotar"),
+                          child: Text('Quero adotar'),
                         ),
                       ],
                     ),

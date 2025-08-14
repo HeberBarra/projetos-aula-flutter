@@ -23,12 +23,12 @@ class _TelaSaudacaoState extends State<TelaSaudacao> {
             TextFormField(
               controller: controllerNome,
               decoration: InputDecoration(
-                labelText: "Nome:",
-                hintText: "Por favor digite seu nome",
+                labelText: 'Nome:',
+                hintText: 'Por favor digite seu nome',
               ),
               validator: (String? valor) {
                 if (valor == null || valor.isEmpty) {
-                  return "Valor inválido";
+                  return 'Valor inválido';
                 }
 
                 return null;
@@ -40,14 +40,14 @@ class _TelaSaudacaoState extends State<TelaSaudacao> {
                   mostrarSaudacao = chaveFormulario.currentState!.validate();
                 });
               },
-              child: Text("Mostrar Saudação"),
+              child: Text('Mostrar Saudação'),
             ),
             Visibility(
               visible: mostrarSaudacao,
               child: Column(
                 children: [
-                  Image.asset("images/doutor.jpg", width: 300, height: 200),
-                  Text("Bom dia, ${controllerNome.text}!"),
+                  Image.asset('images/doutor.jpg', width: 300, height: 200),
+                  Text('Bom dia, ${controllerNome.text}!'),
                 ],
               ),
             ),

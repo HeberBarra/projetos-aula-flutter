@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'views/tela_principal.dart';
+import 'heber_prova_bolo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const TelaPrincipal(),
+      home: const HeberProvaBolo(),
       debugShowCheckedModeBanner: false,
     );
   }

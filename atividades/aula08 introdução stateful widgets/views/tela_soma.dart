@@ -29,11 +29,11 @@ class _TelaSomaState extends State<TelaSoma> {
           child: Column(
             children: [
               InputValor(
-                label: "Primeiro valor:",
+                label: 'Primeiro valor:',
                 controller: controllerPrimeiroValor,
               ),
               InputValor(
-                label: "Segundo Valor:",
+                label: 'Segundo Valor:',
                 controller: controllerSegundoValor,
               ),
               TextButton(
@@ -50,9 +50,9 @@ class _TelaSomaState extends State<TelaSoma> {
                     });
                   }
                 },
-                child: Text("SOMAR"),
+                child: Text('SOMAR'),
               ),
-              Text("Resultado: $resultado"),
+              Text('Resultado: $resultado'),
             ],
           ),
         ),
@@ -71,14 +71,14 @@ class InputValor extends StatelessWidget {
     return TextFormField(
       controller: controller,
       decoration: InputDecoration(
-        hintText: "Digite um número",
+        hintText: 'Digite um número',
         labelText: label,
       ),
       onSaved: (newValue) {},
       validator: (String? valor) {
         return (valor == null || (double.tryParse(valor) != null))
             ? null
-            : "Valor inválido";
+            : 'Valor inválido';
       },
     );
   }

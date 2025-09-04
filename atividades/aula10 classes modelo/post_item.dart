@@ -20,7 +20,7 @@ class _PostItemState extends State<PostItem> {
           onPressed:
               () => {
                 setState(() {
-                  widget.post.liked = !widget.post.liked;
+                  widget.post.toggleLike();
                 }),
               },
           icon:

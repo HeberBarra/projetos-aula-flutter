@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projetosaulaflutter/models/post.dart';
+import '../models/post.dart';
 import 'add_post.dart';
 import '../story_item.dart';
 import '../post_item.dart';

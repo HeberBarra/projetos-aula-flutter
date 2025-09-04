@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:projetosaulaflutter/models/post.dart';
+
+import '../models/post.dart';
 
 class AddPost extends StatefulWidget {
   const AddPost({super.key});

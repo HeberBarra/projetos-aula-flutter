@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+
 import '../models/post.dart';
-import 'add_post.dart';
-import '../story_item.dart';
+import '../models/story.dart';
 import '../post_item.dart';
+import '../story_item.dart';
+import 'add_post.dart';
+import 'add_story.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,16 +15,28 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List _posts = <Post>[
+  final List<Post> _posts = <Post>[
     Post(title: 'Post 1', text: 'Texto Post 1'),
     Post(title: 'Post 2', text: 'Texto Post 2'),
     Post(title: 'Post 3', text: 'Texto Post 3'),
   ];
-  final List _stories = ['story 1', 'story 2', 'story 3', 'story 4', 'story 5'];
+  final List<Story> _stories = <Story>[
+    Story(title: 'Story 1'),
+    Story(title: 'Story 2', closeFriends: true),
+    Story(title: 'Story 3', closeFriends: true),
+    Story(title: 'Story 4'),
+    Story(title: 'Story 5'),
+  ];
 
   void deletePost(int index) {
     setState(() {
       _posts.removeAt(index);
+    });
+  }
+
+  void deleteStory(int index) {
+    setState(() {
+      _stories.removeAt(index);
     });
   }
 
@@ -39,10 +54,46 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             height: 150,
             child: ListView.builder(
-              itemCount: _stories.length,
+              itemCount: _stories.length + 1,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return StoryItem(texto: _stories[index]);
+                if (index == 0) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: GestureDetector(
+                      onTap: () async {
+                        final result = await Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => AddStory()),
+                        );
+
+                        if (result != null) {
+                          setState(() {
+                            _stories.add(result[0]);
+                          });
+                        }
+                      },
+                      child: Container(
+                        height: StoryItem.height,
+                        width: StoryItem.width,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage('images/twelfth_doctor.jpg'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        child: Center(child: Icon(Icons.add, size: 20,)),
+                      ),
+                    ),
+                  );
+                }
+
+                index--;
+                return StoryItem(
+                  story: _stories[index],
+                  deleteItem: () => deleteStory(index),
+                );
               },
             ),
           ),
@@ -50,7 +101,10 @@ class _HomePageState extends State<HomePage> {
             child: ListView.builder(
               itemCount: _posts.length,
               itemBuilder: (context, index) {
-                return PostItem(post: _posts[index], deletePost: () => {deletePost(index)});
+                return PostItem(
+                  post: _posts[index],
+                  deletePost: () => deletePost(index),
+                );
               },
             ),
           ),

@@ -5,6 +5,6 @@ linter:
     prefer_single_quotes: true
     prefer_relative_imports: true
 
-analyzer: 
+analyzer:
   exclude:
-    - atividades 
+    - atividades

@@ -61,13 +61,10 @@ class _AddPostState extends State<AddPost> {
               TextFormField(
                 controller: _postTitleController,
                 decoration: InputDecoration(label: Text('Título: ')),
+                maxLength: _tamanhoPermitidoTitulo,
                 validator: (value) {
                   if (value == null || value.trim().isEmpty) {
                     return 'Entre com o título do seu post';
-                  }
-
-                  if (value.trim().length > _tamanhoPermitidoTitulo) {
-                    return 'O título do post deve ter no máximo $_tamanhoPermitidoTitulo caracteres';
                   }
 
                   return null;
@@ -76,13 +73,10 @@ class _AddPostState extends State<AddPost> {
               TextFormField(
                 controller: _postTextController,
                 decoration: InputDecoration(label: Text('Texto:')),
+                maxLength: _tamanhoPermitidoTexto,
                 validator: (value) {
                   if (value == null || value.trim().isEmpty) {
                     return 'Entre com o texto do seu post';
-                  }
-
-                  if (value.trim().length > _tamanhoPermitidoTexto) {
-                    return 'O texto do post deve ter no máximo $_tamanhoPermitidoTexto caracteres';
                   }
 
                   return null;

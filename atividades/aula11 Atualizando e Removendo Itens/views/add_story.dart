@@ -57,13 +57,10 @@ class _AddStoryState extends State<AddStory> {
               TextFormField(
                 controller: _storyTitleController,
                 decoration: InputDecoration(label: const Text('Título: ')),
+                maxLength: _tamanhoPermitidoTitulo,
                 validator: (value) {
                   if (value == null || value.trim().isEmpty) {
                     return 'Entre com o título do seu story';
-                  }
-
-                  if (value.trim().length > _tamanhoPermitidoTitulo) {
-                    return 'O tamanho máximo do texto do story é $_tamanhoPermitidoTitulo caracteres';
                   }
 
                   return null;

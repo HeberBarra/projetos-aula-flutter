@@ -12,6 +12,7 @@ class AddStory extends StatefulWidget {
 }
 
 class _AddStoryState extends State<AddStory> {
+  final _tamanhoPermitidoTitulo = 7;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _storyTitleController = TextEditingController();
   bool closeFriends = false;
@@ -57,8 +58,12 @@ class _AddStoryState extends State<AddStory> {
                 controller: _storyTitleController,
                 decoration: InputDecoration(label: const Text('Título: ')),
                 validator: (value) {
-                  if (value == null || value.isEmpty) {
+                  if (value == null || value.trim().isEmpty) {
                     return 'Entre com o título do seu story';
+                  }
+
+                  if (value.trim().length > _tamanhoPermitidoTitulo) {
+                    return 'O tamanho máximo do texto do story é $_tamanhoPermitidoTitulo caracteres';
                   }
 
                   return null;
@@ -93,7 +98,7 @@ class _AddStoryState extends State<AddStory> {
                       ),
                     ]);
                   } else {
-                    widget.story?.title = _storyTitleController.text;
+                    widget.story?.title = _storyTitleController.text.trim();
                     widget.story?.closeFriends = closeFriends;
                     Navigator.pop(context);
                   }

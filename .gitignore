@@ -120,3 +120,4 @@ app.*.symbols
 
 lib/
 lib
+.idea
